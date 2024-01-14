@@ -10,7 +10,7 @@ export default async function Home() {
   return (
     <main className="">
       <Jumbotron>
-        <div className="w-full h-52 bg-[url(/annie-spratt-QckxruozjRg-unsplash.jpg)] opacity-20"></div>
+        <div className="w-full h-52 bg-[url(/images/annie-spratt-QckxruozjRg-unsplash.jpg)] opacity-20"></div>
         <div className="absolute ml-2">
           <h1 className=" text-2xl font-bold text-orange-600">
             Code Together, Thrive Together
@@ -29,6 +29,34 @@ export default async function Home() {
           </a>
         </div>
       </Jumbotron>
+      <div className="flex justify-center items-center flex-row mt-10">
+        <div className=" flex flex-col items-center">
+          <img src="/images/together.png" className="w-16" />
+          <h3 className="mt-5 text-lg font-bold text-violet-600">
+            Inclusivity
+          </h3>
+        </div>
+        <div className="mx-5 flex flex-col items-center">
+          <img src="/images/project-management.png" className="w-16" />
+          <h3 className="mt-5 text-lg font-bold text-violet-600">Innovation</h3>
+        </div>
+        <div className="flex flex-col items-center">
+          <img src="/images/collaboration.png" className="w-16" />
+          <h3 className="mt-5 text-lg font-bold text-violet-600">
+            Collaboration
+          </h3>
+        </div>
+      </div>
+      <div className="my-5 w-11/12 m-auto">
+        <p className="text-center">
+          At Diversity in Dev our goal is to provide an environment where
+          individuals all over the tech industry can come together and share
+          their unique experiences. Technology allows ordinary people to create
+          extraordinary things, and this is the place where we want to highlight
+          that. Regardless of where you come from or what you look like,
+          technology can allow you to open new possibilities.
+        </p>
+      </div>
     </main>
   );
 }
