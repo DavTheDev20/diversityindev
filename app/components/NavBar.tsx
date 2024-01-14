@@ -3,7 +3,7 @@
 import NavDrawer from "./NavDrawer";
 import { useState } from "react";
 
-export default function NavBar() {
+export default function NavBar({ session }: { session: any }) {
   const [navDrawerToggled, setNavDrawerToggled] = useState(false);
 
   return (
@@ -33,10 +33,10 @@ export default function NavBar() {
           toggleFunction={() => setNavDrawerToggled(false)}
           links={[
             //Add new links to navdrawer here
-            { linkName: "Login", linkLocation: "/login" },
             { linkName: "About", linkLocation: "/about" },
             { linkName: "Blog", linkLocation: "/blog" },
           ]}
+          session={session}
         />
       ) : null}
     </nav>

@@ -1,6 +1,9 @@
-export default function NavDrawer({ toggleFunction, links }: any) {
+import { signIn, signOut } from "next-auth/react";
+import UserProfile from "./UserProfile";
+
+export default function NavDrawer({ toggleFunction, links, session }: any) {
   return (
-    <div className="bg-violet-600 w-1/3 absolute z-20 right-0 h-screen shadow-md">
+    <div className="bg-violet-600 w-2/5 absolute z-20 right-0 h-screen shadow-md">
       <div className="p-4" onClick={toggleFunction}>
         <svg
           fill="#ffffff"
@@ -25,6 +28,27 @@ export default function NavDrawer({ toggleFunction, links }: any) {
         </svg>
       </div>
       <div className="mt-5 ml-4">
+        {session ? (
+          <>
+            <UserProfile
+              userImage={session.user.image}
+              userName={session.user.name}
+            />
+            <a
+              className="text-white block mt-5 text-xl cursor-pointer"
+              onClick={() => signOut()}
+            >
+              Logout
+            </a>
+          </>
+        ) : (
+          <a
+            className="text-white block mt-5 text-xl cursor-pointer"
+            onClick={() => signIn()}
+          >
+            Login
+          </a>
+        )}
         {links.map(
           (link: { linkName: string; linkLocation: string }, index: any) => {
             return (
