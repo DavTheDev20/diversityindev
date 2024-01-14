@@ -25,16 +25,19 @@ export default function NavDrawer({ toggleFunction, links }: any) {
         </svg>
       </div>
       <div className="mt-5 ml-4">
-        {links.map((link: { linkName: string; linkLocation: string }) => {
-          return (
-            <a
-              href={link.linkLocation}
-              className="text-white block mt-5 text-xl"
-            >
-              {link.linkName}
-            </a>
-          );
-        })}
+        {links.map(
+          (link: { linkName: string; linkLocation: string }, index: any) => {
+            return (
+              <a
+                href={link.linkLocation}
+                className="text-white block mt-5 text-xl"
+                key={index}
+              >
+                {link.linkName}
+              </a>
+            );
+          }
+        )}
       </div>
     </div>
   );

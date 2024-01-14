@@ -32,6 +32,7 @@ export default function NavBar() {
         <NavDrawer
           toggleFunction={() => setNavDrawerToggled(false)}
           links={[
+            //Add new links to navdrawer here
             { linkName: "Login", linkLocation: "/login" },
             { linkName: "About", linkLocation: "/about" },
             { linkName: "Blog", linkLocation: "/blog" },
