@@ -22,7 +22,7 @@ export default async function Home() {
             Celebrating Differences
           </h2>
           <a
-            className="absolute right-5 bg-orange-600 p-2 w-28 text-white rounded-xl font-semibold text-center"
+            className="absolute right-1 bg-orange-600 p-2 w-28 text-white rounded-xl font-semibold text-center"
             href="/api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2F"
           >
             Sign Up
