@@ -10,19 +10,19 @@ export default async function Home() {
   return (
     <main className="">
       <Jumbotron>
-        <div className="w-full h-52 bg-[url(/images/annie-spratt-QckxruozjRg-unsplash.jpg)] opacity-20"></div>
-        <div className="absolute ml-2">
-          <h1 className=" text-2xl font-bold text-orange-600">
+        <div className="w-full h-52 bg-no-repeat bg-cover bg-[url(/images/annie-spratt-QckxruozjRg-unsplash.jpg)] opacity-20 lg:h-64"></div>
+        <div className="absolute ml-2 lg:w-3/6 mx-auto">
+          <h1 className=" text-2xl font-bold text-orange-600 lg:text-3xl">
             Code Together, Thrive Together
           </h1>
-          <h2 className="text-xl mt-3 font-semibold text-violet-600">
+          <h2 className="text-xl mt-3 font-semibold text-violet-600 lg:text-2xl">
             Connecting Coders,
           </h2>
-          <h2 className="text-xl font-semibold text-violet-600">
+          <h2 className="text-xl font-semibold text-violet-600 lg:text-2xl">
             Celebrating Differences
           </h2>
           <a
-            className="absolute right-1 bg-orange-600 p-2 w-28 text-white rounded-xl font-semibold text-center"
+            className="absolute right-1 bg-orange-600 p-2 w-28 text-white rounded-xl font-semibold text-center lg:w-32"
             href="/api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2F"
           >
             Sign Up
